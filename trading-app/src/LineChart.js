@@ -10,11 +10,15 @@ const LineChart = () => {
     fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&outputsize=compact&apikey=ZV7DIFPQUWYA1LD0')
     .then(response => response.json())
     .then(data => {
-      console.log(data["Time Series (Daily)"]["2022-07-20"]["4. close"])
-      
 
+      // console.log(data["Time Series (Daily)"]["2022-07-20"]["4. close"])
+
+      for (let key in data["Time Series (Daily)"]) {
+        const close = console.log(data["Time Series (Daily)"][key]["4. close"])
+      }
+      
       // const closing = data.filter(data => {
-      //   return data === 'close'
+      //   return data["Time Series (Daily)"][key]["4. close"] === 'close'
       // })
     })
   })
