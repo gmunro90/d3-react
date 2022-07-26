@@ -1,12 +1,19 @@
 import LineChart from './LineChart';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <LineChart />
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/'  />
+          <Route path='/reports'  />
+          <Route path='/products'  />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
