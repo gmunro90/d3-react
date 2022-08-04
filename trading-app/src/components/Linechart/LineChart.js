@@ -55,13 +55,21 @@ let fakeData = [
   console.log(result)
 
 */
-  
-svg.append('path')
-  .datum(yData)
-  .attr('fill', 'none')
-  .attr('stroke', 'steelblue')
-  .attr('stroke-width', 1.5)
-  .attr('d', d3.line())
+  //hard coded line
+svg.append('line')
+.attr('x1', 50)
+.attr('y1', 300)
+.attr('x2', 100)
+.attr('y2', 200)
+.attr('stroke', 'lightblue')
+
+
+// svg.append('path')
+//   .datum(yData)
+//   .attr('fill', 'none')
+//   .attr('stroke', 'steelblue')
+//   .attr('stroke-width', 1.5)
+//   .attr('d', d3.line())
 
 main()
 
